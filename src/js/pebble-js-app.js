@@ -1,4 +1,4 @@
-var config_url = "http://wearewearable.com/flying-blind/?v=1.1";
+var config_url = "http://pebble.design-hypnotic.co/?v=1.1";
 
 Pebble.addEventListener("ready", function(e) {
 
