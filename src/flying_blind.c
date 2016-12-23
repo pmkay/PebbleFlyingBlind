@@ -3,6 +3,7 @@
  * Please read the LICENSE.md file for more information
  * 
  * Copyright (c) 2013 Matthew Congrove (http://github.com/mcongrove)
+ * Modified and improved by PK -> to emulate the DURRR watch by vibrating every 5 minutes
  */
 #include <pebble.h>
 
@@ -84,23 +85,61 @@ static void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
 	
 	if (t->tm_min == 0) {
 		vibes_long_pulse();
-	} else if ((VIBRATE == 1 && t->tm_min == 30) || (VIBRATE == 2 && (t->tm_min == 15 || t->tm_min == 30 || t->tm_min == 45))) {
-		if (t->tm_min == 15) {
-			static const uint32_t const segments15[] = { 100, 100 };
+	} else if ((VIBRATE == 1 && t->tm_min == 30) || (VIBRATE == 2 && (t->tm_min == 15 || t->tm_min == 30 || t->tm_min == 45)) || (VIBRATE == 3 && (t->tm_min == 5 || t->tm_min == 10 || t->tm_min == 15 || t->tm_min == 20 || t->tm_min == 25 || t->tm_min == 30 || t->tm_min == 35 || t->tm_min == 40 || t->tm_min == 45 || t->tm_min == 50 || t->tm_min == 55 ))) {
+		if (t->tm_min == 5) {
+			static const uint32_t const segments5[] = { 100, 100 };
+			VibePattern pat5 = { .durations = segments5, .num_segments = ARRAY_LENGTH(segments5) };
+			vibes_enqueue_custom_pattern(pat5);
+		}
+    		if (t->tm_min == 10) {
+			static const uint32_t const segments10[] = { 100, 100 };
+			VibePattern pat10 = { .durations = segments10, .num_segments = ARRAY_LENGTH(segments10) };
+			vibes_enqueue_custom_pattern(pat10);
+		}
+    		if (t->tm_min == 15) {
+			static const uint32_t const segments15[] = { 100, 100, };
 			VibePattern pat15 = { .durations = segments15, .num_segments = ARRAY_LENGTH(segments15) };
 			vibes_enqueue_custom_pattern(pat15);
 		}
-		
-		if (t->tm_min == 30) {
-			static const uint32_t const segments30[] = { 100, 100, 100, 100 };
+		    if (t->tm_min == 20) {
+			static const uint32_t const segments20[] = { 100, 100 };
+			VibePattern pat20 = { .durations = segments20, .num_segments = ARRAY_LENGTH(segments20) };
+			vibes_enqueue_custom_pattern(pat20);
+		}
+    		if (t->tm_min == 25) {
+			static const uint32_t const segments25[] = { 100, 100 };
+			VibePattern pat25 = { .durations = segments25, .num_segments = ARRAY_LENGTH(segments25) };
+			vibes_enqueue_custom_pattern(pat25);
+		}
+			if (t->tm_min == 30) {
+			static const uint32_t const segments30[] = { 100, 100 };
 			VibePattern pat30 = { .durations = segments30, .num_segments = ARRAY_LENGTH(segments30) };
 			vibes_enqueue_custom_pattern(pat30);
 		}
-		
-		if (t->tm_min == 45) {
-			static const uint32_t const segments45[] = { 100, 100, 100, 100, 100, 100 };
+    		if (t->tm_min == 35) {
+			static const uint32_t const segments35[] = { 100, 100 };
+			VibePattern pat35 = { .durations = segments35, .num_segments = ARRAY_LENGTH(segments35) };
+			vibes_enqueue_custom_pattern(pat35);
+		}
+			if (t->tm_min == 40) {
+			static const uint32_t const segments40[] = { 100, 100 };
+			VibePattern pat40 = { .durations = segments40, .num_segments = ARRAY_LENGTH(segments40) };
+			vibes_enqueue_custom_pattern(pat40);
+		}
+			if (t->tm_min == 45) {
+			static const uint32_t const segments45[] = { 100, 100 };
 			VibePattern pat45 = { .durations = segments45, .num_segments = ARRAY_LENGTH(segments45) };
 			vibes_enqueue_custom_pattern(pat45);
+		}
+    		if (t->tm_min == 50) {
+			static const uint32_t const segments50[] = { 100, 100 };
+			VibePattern pat50 = { .durations = segments50, .num_segments = ARRAY_LENGTH(segments50) };
+			vibes_enqueue_custom_pattern(pat50);
+		}
+    		if (t->tm_min == 55) {
+			static const uint32_t const segments55[] = { 100, 100 };
+			VibePattern pat55 = { .durations = segments55, .num_segments = ARRAY_LENGTH(segments55) };
+			vibes_enqueue_custom_pattern(pat55);
 		}
 	}
 }

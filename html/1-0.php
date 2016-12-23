@@ -50,7 +50,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 							$options = array(
 								0 => 'On the hour',
 								1 => 'Every half-hour',
-								2 => 'Every 15 minutes'
+								2 => 'Every 15 minutes',
+								3 => 'Every 5 minutes'
 							);
 							
 							foreach($options as $key => $option)
@@ -90,16 +91,14 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 			</h4>
 			
 			<h5>
-				www.WeAreWearable.com
+				Original code by www.WeAreWearable.com
+				Modified by PK => Design-hypnotics.com
 			</h5>
 			
 			<h5>
-				"Flying Blind" watchface for Pebble, developed by Matthew Congrove
+				"Flying Blind" watchface for Pebble, developed by Matthew Congrove and modified by pk
 			</h5>
 			
-			<h5>
-				www.MatthewCongrove.com
-			</h5>
 		</div>
 	</div>
 	

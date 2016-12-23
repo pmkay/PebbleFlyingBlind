@@ -85,16 +85,14 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 			</h4>
 			
 			<h5>
-				www.WeAreWearable.com
+				 Original code by www.WeAreWearable.com
+				 Modified by design-hypnotics.com
 			</h5>
 			
 			<h5>
-				"Flying Blind" watchface for Pebble, developed by Matthew Congrove
+				"Flying Blind" watchface for Pebble, developed by Matthew Congrove, Modfied by PK
 			</h5>
 			
-			<h5>
-				www.MatthewCongrove.com
-			</h5>
 		</div>
 	</div>
 	

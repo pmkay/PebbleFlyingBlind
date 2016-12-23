@@ -9,10 +9,10 @@
 		{
 			require($filename);
 		} else {
-			echo '<h1>Error</h1><p>Unable to locate configuration page for this version.</p><p>Please contact an <a href="mailto:me@mattcongrove.com">administrator</a>.</p>';
+			echo '<h1>Error</h1><p>Unable to locate configuration page for this version.</p><p>Please contact an <a href="mailto:pk@design-hypnotics.com">administrator</a>.</p>';
 		}
 	} else {
-		echo '<h1>Error</h1><p>Unable to locate configuration page for this version.</p><p>Please contact an <a href="mailto:me@mattcongrove.com">administrator</a>.</p>';
+		echo '<h1>Error</h1><p>Unable to locate configuration page for this version.</p><p>Please contact an <a href="mailto:info@design-hypnotics.com">administrator</a>.</p>';
 	}
 
 ?>
